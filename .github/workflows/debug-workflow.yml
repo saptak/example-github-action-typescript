@@ -1,6 +1,3 @@
-name: 'Debug workflow'
-on: [push]
-
 jobs:
   build:
     name: Debug
@@ -14,4 +11,6 @@ jobs:
       - uses: ./.github/actions/debug-action
         with:
           amazing-creature: Octocat
-          
+        id: debug
+      - run: echo There was an amazing message - ${{ steps.debug.outputs.amazing-message }}
+      
