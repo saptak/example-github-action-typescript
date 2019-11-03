@@ -15,7 +15,7 @@ beforeEach(() => {
     pusher: {
       name: 'mona',
     },
-  } as WebhookPayload
+  } 
 })
 
 afterEach(() => {
