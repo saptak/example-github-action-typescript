@@ -10,6 +10,11 @@ beforeEach(() => {
     const envVar = `INPUT_${name.replace(/ /g, '_').toUpperCase()}`
     process.env[envVar] = doc.inputs[name]['default']
   })
+  github.context.payload = {
+    pusher: {
+      name: 'mona',
+    },
+  } as WebhookPayload
 })
 
 afterEach(() => {
